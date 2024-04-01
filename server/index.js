@@ -17,6 +17,10 @@ app.get("*", (req, res) => {
   res.sendStatus("404");
 });
 
+app.get("/", (req, res) => {
+  res.json("Hai");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on Port: ${PORT}`);
 });
