@@ -13,12 +13,12 @@ app.use(cors());
 app.use(express.json());
 app.use(NoteRoute);
 
-app.get("*", (req, res) => {
-  res.sendStatus("404");
-});
-
 app.get("/", (req, res) => {
   res.json("Hai");
+});
+
+app.get("*", (req, res) => {
+  res.sendStatus("404");
 });
 
 app.listen(PORT, () => {
